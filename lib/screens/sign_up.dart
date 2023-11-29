@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grimorio/display_text.dart';
-import 'package:grimorio/primary_button.dart';
+import 'package:grimorio/screens/components/display_text.dart';
+import 'package:grimorio/screens/components/primary_button.dart';
 import 'package:grimorio/theme.dart';
 
 class Signup extends StatefulWidget {
@@ -15,17 +15,19 @@ class _SignupState extends State<Signup> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Container(
+    return SafeArea(
+        child: Container(
       decoration: AppBackgroundProperties.boxDecoration,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Center(
           child: SingleChildScrollView(
-            child: Column(children: <Widget>[
-              const Padding(
-                padding: EdgeInsets.only(bottom: 16.0),
-                child: DisplayText("Cadastre-se"),
-              ),
+            child: Column(
+              children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 16.0),
+                  child: DisplayText("Cadastre-se"),
+                ),
                 SizedBox(
                   width: 246,
                   child: Form(

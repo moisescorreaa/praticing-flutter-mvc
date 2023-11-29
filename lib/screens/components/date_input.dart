@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../theme.dart';
+import '../../../../theme.dart';
 
 class DateInput extends StatefulWidget {
-  const DateInput({super.key, required this.textController, required this.label});
+  const DateInput(
+      {super.key, required this.textController, required this.label});
 
   final TextEditingController textController;
   final String label;
@@ -30,17 +31,18 @@ class _DateInputState extends State<DateInput> {
     );
   }
 
-  Future<void> _getDate(BuildContext context, TextEditingController textController) async {
-    DateTime? selectedDate =
-        await showDatePicker(
+  Future<void> _getDate(
+      BuildContext context, TextEditingController textController) async {
+    DateTime? selectedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(1990),
       lastDate: DateTime.now(),
     );
     setState(() {
-      if(selectedDate != null){
-        textController.text = "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}";
+      if (selectedDate != null) {
+        textController.text =
+            "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}";
       }
     });
   }
