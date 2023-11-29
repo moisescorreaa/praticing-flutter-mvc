@@ -1,0 +1,4 @@
+#Tue Nov 28 21:17:56 BRT 2023
+base.0=/home/moises/Documents/Projetos - Codes/praticing-flutter-mvc/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
