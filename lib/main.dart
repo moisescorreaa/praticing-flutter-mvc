@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grimorio/initial.dart';
+import 'package:grimorio/dashboard.dart';
 
 void main() {
   runApp(const Grimorio());
@@ -11,8 +11,9 @@ class Grimorio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Grimório",
-        theme: ThemeData.dark(useMaterial3: true),
-        home: Initial());
+      title: "Grimório",
+      theme: ThemeData.dark(useMaterial3: true),
+      home: const Dashboard(),
+    );
   }
 }
