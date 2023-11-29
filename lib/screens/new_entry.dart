@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grimorio/models/google_book.dart';
 import 'components/date_input.dart';
 import 'components/display_text.dart';
 import 'components/entry.dart';
@@ -7,10 +8,11 @@ import '../../theme.dart';
 
 import 'home.dart';
 
+// ignore: must_be_immutable
 class NewEntry extends StatefulWidget {
-  const NewEntry({
-    super.key,
-  });
+  NewEntry({super.key, required this.googleBook});
+
+  GoogleBook googleBook;
 
   @override
   State<NewEntry> createState() => _NewEntryState();
@@ -43,10 +45,10 @@ class _NewEntryState extends State<NewEntry> {
                   width: 244,
                   child: Column(
                     children: <Widget>[
-                      // Entry(book: "Book"),
+                      Entry(googleBook: widget.googleBook),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 24.0),
-                        child: Text("Book Description"),
+                        child: Text(widget.googleBook.description),
                       ),
                       Form(
                         key: _formKey,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../theme.dart';
-import 'book_details.dart';
 import 'components/display_text.dart';
 import 'components/floating_button.dart';
 import 'search_books.dart';

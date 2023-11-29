@@ -3,7 +3,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-import '../services/google_book_service.dart';
+import '../models/personal_book.dart';
 
 class PersonalBookDatabase {
   static const String _tableName = "bookTable";
@@ -109,19 +109,3 @@ class PersonalBookDatabase {
 }
 
 class PersonalBookNotFindException implements Exception {}
-
-// These below are just examples. Need to create new models
-class PersonalBook {
-  int id = 0;
-  GoogleBook googleBook = GoogleBook(
-      authors: "a", description: "b", id: "c", thumbnailLink: "d", title: "e");
-
-  PersonalBook.fromMap(Map<String, dynamic> map) {
-    id = map["id"];
-    googleBook = map["googleBook"];
-  }
-
-  Map<String, dynamic> toMap() {
-    return {"id": id, "googleBook": googleBook};
-  }
-}
