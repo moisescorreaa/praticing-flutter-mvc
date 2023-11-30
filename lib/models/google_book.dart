@@ -21,21 +21,19 @@ class GoogleBook {
     thumbnailLink = validateThumbnail(map);
   }
 
-  validateThumbnail(Map<String, dynamic> map) {
-    map["volumeInfo"]["imageLinks"]?["thumbnail"] ??
-        "https://placehold.co/240x290";
-  }
+  validateThumbnail(Map<String, dynamic> map) =>
+      map["volumeInfo"]["imageLinks"]?["thumbnail"] ??
+      "https://placehold.co/200x290.png";
 
   validateDescription(Map<String, dynamic> map) =>
       map["volumeInfo"]["description"] ?? "Sem descrição";
 
-  String validateAuthors(Map<String, dynamic> map) {
-    return map["volumeInfo"]["authors"] == null
-        ? "Autores desconhecidos"
-        : (map["volumeInfo"]["authors"] as List<dynamic>)
-            .map((e) => e)
-            .toString();
-  }
+  String validateAuthors(Map<String, dynamic> map) =>
+      map["volumeInfo"]["authors"] == null
+          ? "Autor desconhecido"
+          : (map["volumeInfo"]["authors"] as List<dynamic>)
+              .map((e) => e)
+              .toString();
 
   validateTitle(Map<String, dynamic> map) =>
       map["volumeInfo"]["title"] ?? "Título desconhecido";

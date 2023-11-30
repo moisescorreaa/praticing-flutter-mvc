@@ -5,8 +5,9 @@ import '../../theme.dart';
 import 'components/display_text.dart';
 import 'components/primary_button.dart';
 import 'components/secondary_button.dart';
+import 'edit_details.dart';
+import 'home.dart';
 
-// ignore: must_be_immutable
 class BookDetails extends StatefulWidget {
   BookDetails({super.key, required this.personalBook});
 
@@ -17,6 +18,7 @@ class BookDetails extends StatefulWidget {
 }
 
 class _BookDetailsState extends State<BookDetails> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

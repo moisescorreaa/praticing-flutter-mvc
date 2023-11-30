@@ -8,7 +8,6 @@ import '../../theme.dart';
 
 import 'home.dart';
 
-// ignore: must_be_immutable
 class NewEntry extends StatefulWidget {
   NewEntry({super.key, required this.googleBook});
 
